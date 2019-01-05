@@ -1,0 +1,36 @@
+.page__title {
+  text-align: center;
+}
+
+.weui-btn-area {
+  margin-bottom: 16px;
+}
+
+.clip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.item-text {
+  opacity: 0.6;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.page__hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: #fff;
+  font-weight: bold;
+}
+
+.page__bd {
+  padding: 30px 0;
+  background: #efefef;
+}

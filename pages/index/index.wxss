@@ -1,0 +1,48 @@
+/* pages/bluetooth/index.wxss */
+
+/* 蓝牙连接开关 */
+
+.bluetooth-switch-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: -webkit-flex;
+  border-bottom: 1px solid #efefef;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+.bluetooth-switch-title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.bluetooth-switch {
+  text-align: right;
+}
+
+.clip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.item-text {
+  opacity: 0.6;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.weui-btn-area{
+  padding: 16px;
+  margin: 0;
+}
+
+.text-none{
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+}

@@ -1,0 +1,40 @@
+
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__hd">
+    <view class="page__title">计算手机坐标</view>
+  </view>
+  <view class="page__bd">
+
+    <view class="weui-cells__title">选中的设备（自动选取距离最近的三个）</view>
+    <view class="weui-cells" wx:for="{{deviceList}}" wx:key="value">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="item-title clip">{{item.name||'-'}}</view>
+          <view class="item-text small-text clip">{{item.deviceId||'-'}}</view>
+          <view class="item-text small-text">强度：{{item.RSSI||'-'}} 距离：{{item.distance||'-'}} 米</view>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">坐标 X</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" data-id="{{item.deviceId}}" value="{{item.x}}" bindinput="bindXInput" placeholder="必填，只能输入数字" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">坐标 Y</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" data-id="{{item.deviceId}}" value="{{item.y}}" bindinput="bindYInput" placeholder="必填，只能输入数字" />
+        </view>
+      </view>
+
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" disabled="{{!enableSubmit}}" bindtap="calcPosition">计算</button>
+    </view>
+  </view>
+</view>
